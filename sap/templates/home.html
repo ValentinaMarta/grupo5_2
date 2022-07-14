@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Figaro</title>
+    {% load static %}
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+</head>-->
+
+<body class="body-menu">
+{% include "menu.html" %}
+    <section>
+        <div class="cajas-home">
+            <h1>¡Hola, profesor Freddie!</h1>
+            <div class="caja-1">
+                <a href="{% url "alumno" %}"><img src='{% static "/img/persona.png" %}' alt="" class="img"></a>
+                <h2 class="titulo">Registrar alumno</h2>
+            </div>
+            <div class="caja-2">
+                <a href="{% url "leccion" %}"><img src='{% static "/img/libreria6.png" %}' alt="" class="img"></a>
+                <h2 class="titulo">Registrar lecciones</h2>
+            </div>
+            <div class="caja-3">
+                <a href="{% url "notas" %}"><img src='{% static "/img/corregir2.png" %}' alt="" class="img"></a>
+                <h2>Registrar calificaciones</h2>
+            </div>
+            <div class="caja-4">
+                <a href="{% url "iniciar" %}"><img src='{% static "/img/logout.png" %}' alt="" class="img"></a>
+                <h2 class="titulo">Cerrar Sesión</h2>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+    <title>Escuela Figaro</title>
+</head>
+
+<body class="body-menu">
+    <div class="container-home">
+        <div class="btn-menu">
+            <label for="btn-menu" class="icon-menu"></label>
+        </div>
+    </div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <div class="logo">
+                <a href="{% url "home" %}"><img src='{% static "/img/logo.png" %}' alt=""></a>
+            </div>
+            <nav>
+                <a href="{% url "home" %}">Inicio</a>
+                <a href="{% url "leccion" %}">Lecciones</a>
+                <a href="{% url "notas" %}">Calificaciones</a>
+                <a href="{% url "alumno" %}">Alumnos</a>
+                <a href="{% url "iniciar" %}">Cerrar Sesion</a>
+            </nav>
+            <label for="btn-menu" class="icon-equis"></label>
+        </div>
+    </div>
+</body>
+</html>

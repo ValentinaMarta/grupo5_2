@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela de Música FIGARO</title>
+    {% load static %}
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<div class="contenedor">
+    <header class="header">
+        <img src='{% static "/img/logo.png" %}' width="200px">
+    </header>
+
+    <main class="contenido">
+        <h1>Iniciar Sesión</h1>
+        <form class="form_box" method="POST">
+            {% csrf_token %}
+
+            <label for="usuario">Usuario
+                <input class="form_imput" name="username" type="text">
+            </label>
+            <br>
+            <br>
+            <label for="pass">Contraseña
+                <input class="form_imput" name="password" type="password">
+            </label>
+            <br>
+            <br>
+            <button type="submit" class="button">
+                <a href="{% url 'home' %}">LOG IN</a>
+            </button>
+            <!--<ul>
+                <li><input class="form_imput" name="Email" placeholder="Email" type="textform">
+                </li>
+                <li><input class="form_imput" name="Contraseña" placeholder="Contraseña" type="textform">
+                </li>
+            </ul>--!>
+            <br>
+            <br>
+            <br>
+            <a href="contraseña/"> ¿Olvidaste tu contraseña?</a>
+            <br>
+            <br>
+            <br>
+            <div>
+                ¿No tienes cuenta?
+            <button type="button" class="button">
+                <a href="{% url 'registrar' %}">Regístrate</a>
+            </button>
+            </div>
+        </form>
+
+    </main>
+    <aside class="sidebar">
+    </aside>
+    <div class="widget-1">
+    </div>
+    <div class="widget-2">
+    </div>
+    <footer class="footer">
+    </footer>
+</div>
+</body>
+
+</html>
